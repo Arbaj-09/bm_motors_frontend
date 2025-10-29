@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#f4f4f5"/>
+  <g stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="200" y="180" width="400" height="60" rx="12"/>
+    <path d="M240 240v80M280 240v80M320 240v80M360 240v80M400 240v80M440 240v80M480 240v80M520 240v80M560 240v80"/>
+    <circle cx="250" cy="360" r="16" fill="#0a0a0a"/>
+    <circle cx="350" cy="360" r="16" fill="#0a0a0a"/>
+    <circle cx="450" cy="360" r="16" fill="#0a0a0a"/>
+    <circle cx="550" cy="360" r="16" fill="#0a0a0a"/>
+  </g>
+  <text x="32" y="64" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#0a0a0a">AC Service & Repair</text>
+</svg>

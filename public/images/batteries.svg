@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#f4f4f5"/>
+  <g stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="250" y="200" width="300" height="180" rx="12"/>
+    <rect x="320" y="180" width="40" height="20"/>
+    <rect x="440" y="180" width="40" height="20"/>
+    <path d="M310 250h60M450 250h60"/>
+    <path d="M360 280v40M340 300h40"/>
+    <path d="M490 280v40"/>
+  </g>
+  <text x="32" y="64" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#0a0a0a">Car Batteries</text>
+</svg>

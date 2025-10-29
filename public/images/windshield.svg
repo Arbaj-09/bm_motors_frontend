@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#f4f4f5"/>
+  <g stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M200 320c40-60 80-80 200-80 120 0 160 20 200 80v40H200z"/>
+    <path d="M220 300l160-80M580 300l-160-80"/>
+    <path d="M240 260h320"/>
+    <path d="M350 290v60M450 290v60"/>
+  </g>
+  <text x="32" y="64" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#0a0a0a">Windshield & Glass</text>
+</svg>

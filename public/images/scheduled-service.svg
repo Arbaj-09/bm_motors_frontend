@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="16" fill="#f4f4f5"/>
+  <g stroke="#0a0a0a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="160" y="220" width="480" height="140" rx="20"/>
+    <circle cx="260" cy="380" r="30"/>
+    <circle cx="540" cy="380" r="30"/>
+    <path d="M240 250h80M340 250h180"/>
+    <path d="M240 290h60M320 290h160"/>
+    <circle cx="560" cy="180" r="50" fill="#fff"/>
+    <path d="M560 140v40l30 20"/>
+  </g>
+  <text x="32" y="64" font-family="Arial, Helvetica, sans-serif" font-size="32" fill="#0a0a0a">Scheduled Service</text>
+</svg>
