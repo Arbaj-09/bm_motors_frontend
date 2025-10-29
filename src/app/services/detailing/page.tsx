@@ -2,20 +2,26 @@ import Image from "next/image";
 
 export default function DetailingPage() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-        <div className="relative h-72 w-full bg-zinc-100 rounded-xl">
-          <Image src="https://images.pexels.com/photos/3807274/pexels-photo-3807274.jpeg?w=800&q=80" alt="Car Detailing" fill className="object-cover p-6 fade-in" loading="lazy" />
-        </div>
-        <div>
-          <h1 className="text-3xl font-semibold mb-4">Car Detailing</h1>
-          <p className="text-zinc-700 mb-4">Restore your car's showroom shine with our premium detailing packages. Deep cleaning, polishing, and protection for interior and exterior.</p>
-          <div className="flex gap-3">
-            <a href="tel:+919637925555" className="inline-flex items-center rounded-md bg-black text-white px-5 py-3 hover:bg-zinc-800 transition">Call Now</a>
-            <a href="mailto:bmmotors55@gmail.com" className="inline-flex items-center rounded-md border border-zinc-300 px-5 py-3 hover:bg-zinc-50 transition">Mail Us</a>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div>
+              <div className="inline-block bg-blue-500/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">✨ Premium Detailing</div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Car Detailing & Spa</h1>
+              <p className="text-xl text-blue-100 mb-8">Restore your car's showroom shine with our premium detailing packages. Deep cleaning, polishing, and protection for interior and exterior.</p>
+              <div className="flex flex-wrap gap-4">
+                <a href="tel:+919637925555" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-105 shadow-xl">📞 Book Now</a>
+                <a href="#packages" className="bg-white/10 backdrop-blur-md border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all">View Packages</a>
+              </div>
+            </div>
+            <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <Image src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80" alt="Car Detailing" fill className="object-cover" priority />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <div className="border rounded-xl p-6 bg-white">

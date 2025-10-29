@@ -27,34 +27,36 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full border-b border-[#D5D7DE] bg-[#191D26]/90 backdrop-blur-xl supports-[backdrop-filter]:bg-[#191D26]/90 sticky top-0 z-40 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between font-sans" style={{fontFamily: 'Poppins, Inter, Roboto, sans-serif'}}>
-        <a href="/" className="text-2xl font-bold tracking-tight text-[#D5D7DE] drop-shadow-glow">
-          BM Motors
+    <header className="w-full border-b border-gray-200 bg-white sticky top-0 z-50 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" className="text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors">
+          🚗 BM Motors
         </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-gray-700">
+          <a href="/" className="hover:text-blue-600 transition-colors">Home</a>
+          
           {/* Services Dropdown */}
           <div
             className="relative group"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="hover:text-blue-600 flex items-center gap-1 transition-colors">
+            <button className="hover:text-blue-600 flex items-center gap-1 transition-colors py-2">
               Services
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-0 mt-0 pt-2 z-50">
-                <div className="w-64 bg-white border border-gray-200 rounded-xl shadow-2xl py-3 backdrop-blur-lg">
+              <div className="absolute top-full left-0 pt-0 z-50">
+                <div className="w-64 bg-white border border-gray-200 rounded-lg shadow-xl py-2">
                   {services.map((s) => (
                     <a
                       key={s.href}
                       href={s.href}
-                      className="block px-5 py-2.5 text-sm text-gray-900 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 hover:underline transition-all"
+                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all"
                     >
                       {s.name}
                     </a>
@@ -70,20 +72,20 @@ export default function Header() {
             onMouseEnter={() => setCategoriesOpen(true)}
             onMouseLeave={() => setCategoriesOpen(false)}
           >
-            <button className="hover:text-blue-600 flex items-center gap-1 transition-colors">
+            <button className="hover:text-blue-600 flex items-center gap-1 transition-colors py-2">
               Categories
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {categoriesOpen && (
-              <div className="absolute top-full left-0 mt-0 pt-2 z-50">
-                <div className="w-72 bg-white border border-gray-200 rounded-xl shadow-2xl py-3 backdrop-blur-lg">
+              <div className="absolute top-full left-0 pt-0 z-50">
+                <div className="w-72 bg-white border border-gray-200 rounded-lg shadow-xl py-2">
                   {categories.map((c) => (
                     <a
                       key={c.href}
                       href={c.href}
-                      className="block px-5 py-2.5 text-sm text-gray-900 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 hover:text-blue-700 hover:underline transition-all"
+                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all"
                     >
                       {c.name}
                     </a>
@@ -100,9 +102,16 @@ export default function Header() {
           <a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a>
         </nav>
 
+        {/* CTA Button - Desktop */}
+        <div className="hidden lg:flex items-center gap-3">
+          <a href="tel:+919637925555" className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg font-semibold transition-colors shadow-md">
+            📞 Call Now
+          </a>
+        </div>
+
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2"
+          className="lg:hidden p-2 text-gray-700"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,33 +126,37 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t bg-white">
-          <div className="max-w-7xl mx-auto px-4 py-4 space-y-4">
+        <div className="lg:hidden border-t bg-white">
+          <div className="max-w-7xl mx-auto px-4 py-4 space-y-3">
+            <a href="/" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Home</a>
             <div>
-              <div className="font-medium mb-2">Services</div>
+              <div className="font-semibold mb-2 text-gray-900">Services</div>
               <div className="pl-4 space-y-2">
                 {services.map((s) => (
-                  <a key={s.href} href={s.href} className="block text-sm text-zinc-600 hover:text-black">
+                  <a key={s.href} href={s.href} className="block text-sm text-gray-600 hover:text-blue-600 py-1">
                     {s.name}
                   </a>
                 ))}
               </div>
             </div>
             <div>
-              <div className="font-medium mb-2">Categories</div>
+              <div className="font-semibold mb-2 text-gray-900">Categories</div>
               <div className="pl-4 space-y-2">
                 {categories.map((c) => (
-                  <a key={c.href} href={c.href} className="block text-sm text-zinc-600 hover:text-black">
+                  <a key={c.href} href={c.href} className="block text-sm text-gray-600 hover:text-blue-600 py-1">
                     {c.name}
                   </a>
                 ))}
               </div>
             </div>
-            <a href="/areas" className="block">Areas</a>
-            <a href="/pricing" className="block">Pricing</a>
-            <a href="/reviews" className="block">Reviews</a>
-            <a href="/faqs" className="block">FAQs</a>
-            <a href="/contact" className="block">Contact</a>
+            <a href="/areas" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Areas</a>
+            <a href="/pricing" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Pricing</a>
+            <a href="/reviews" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Reviews</a>
+            <a href="/faqs" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">FAQs</a>
+            <a href="/contact" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            <a href="tel:+919637925555" className="block mt-4 bg-orange-500 hover:bg-orange-600 text-white px-5 py-3 rounded-lg font-semibold text-center transition-colors">
+              📞 Call Now
+            </a>
           </div>
         </div>
       )}
