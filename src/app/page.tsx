@@ -9,20 +9,33 @@ export default function Home() {
           <div className="absolute inset-0" style={{backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.4"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }}></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Car Service & Repair At Your Doorstep
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Expert mechanics, genuine parts, and doorstep service across Mumbai
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="tel:+919637925555" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105 shadow-xl">
-                📞 Book Service Now
-              </a>
-              <a href="#services" className="bg-white/10 backdrop-blur-md border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">
-                Explore Services
-              </a>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Car Service & Repair At Your Doorstep
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Expert mechanics, genuine parts, and doorstep service across Mumbai
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="tel:+919637925555" className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105 shadow-xl">
+                  📞 Book Service Now
+                </a>
+                <a href="#services" className="bg-white/10 backdrop-blur-md border-2 border-white hover:bg-white hover:text-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all">
+                  Explore Services
+                </a>
+              </div>
+            </div>
+            {/* 3D Car Service Animation */}
+            <div className="relative hidden lg:block">
+              <div className="animate-float">
+                <img 
+                  src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=90" 
+                  alt="Car Service Top View with Tools" 
+                  className="w-full h-auto drop-shadow-2xl rounded-2xl transform hover:scale-105 transition-transform duration-500"
+                  style={{filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3)'}}
+                />
+              </div>
             </div>
           </div>
         </div>
